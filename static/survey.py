@@ -21,7 +21,7 @@ try:
 except NameError:
     pass
 
-PRODUCTION_SYSTEM = PRIMARY_USE_OF_PYTHON = YEARS_USING_PYTHON = PYTHON_MONHTLY_USAGE = CONTRIBUTER_TO_OSS = None
+PRODUCTION_SYSTEM = PRIMARY_USE_OF_PYTHON = YEARS_USING_PYTHON = PYTHON_MONTHLY_USAGE = CONTRIBUTER_TO_OSS = None
 TEST = True if os.environ.get("TRAVIS") else False
 HIDE_EMOJI = True if (platform == "win32" or TEST) else False
 ENDPOINT = "https://python-packages-survey.com/collect"
@@ -97,7 +97,7 @@ if not TEST:
     YEARS_USING_PYTHON = str(input("""How many years have you been using Python?
 (float): """)) or None; print()
 
-    PYTHON_MONHTLY_USAGE = str(input("""Approximately, how many days per month do you work with Python?
+    PYTHON_MONTHLY_USAGE = str(input("""Approximately, how many days per month do you work with Python?
 (int): """)) or None; print()
 
 
@@ -109,7 +109,7 @@ data = {
     "python_version": python_version(),
     "primary_use": PRIMARY_USE_OF_PYTHON,
     "years_using_python": YEARS_USING_PYTHON,
-    "python_monthly_usage": PYTHON_MONHTLY_USAGE,
+    "python_monthly_usage": PYTHON_MONTHLY_USAGE,
     "production_system": PRODUCTION_SYSTEM,
 }
 
